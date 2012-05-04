@@ -5,7 +5,9 @@ map <C-H> <C-W>h<C-W>_
 
 " Formatting {
     set wrap
-    set colorcolumn=80              " show margin at 80
+    if v:version >= 730
+      set colorcolumn=80              " show margin at 80
+    endif
     set shiftwidth=2                " use indents of 2 spaces
     set tabstop=2                   " an indentation every four columns
     set softtabstop=2               " let backspace delete indent
