@@ -1,0 +1,32 @@
+var ROLES = {
+  PRIMARY: 0,
+  SYNC: 1,
+  ASYNC: 2
+};
+
+/**
+ * Returns the latest snapshot.
+ */
+function getLatestSnapshot(snapshotDir, dataset, log, callback) {
+  log.debug('getting snapshots from dir ', snapshotDir);
+  var snapshots = shelljs.ls(snapshotDir);
+  log.debug('got the following snapshots', snapshots);
+  snapshots.sort(compareNumbers);
+
+  var latestSnapshot = snapshots[snapshots.length - 1];
+  latestSnapshot = dataset + '@' + latestSnapshot;
+  log.debug('latest snapshot is %s', latestSnapshot);
+  return callback(latestSnapshot);
+}
+
+function compareNumbers(a, b) {
+  return a - b;
+}
+
+/**
+ *
+ */
+module.exports = {
+  ROLES: ROLES,
+  getLatestSnapshot: getLatestSnapshot
+};

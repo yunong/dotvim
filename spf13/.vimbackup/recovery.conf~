@@ -1,0 +1,2 @@
+standby_mode = on
+primary_conninfo = 'host=localhost port=5432 user=yunong application_name=sync'
