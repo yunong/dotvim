@@ -1,5 +1,0 @@
-"Bundle 'minibufexpl.vim'
-Bundle 'corntrace/bufexplorer'
-"Bundle 'javaScriptLint.vim'
-Bundle 'Shougo/neocomplcache-snippets-complete'
-Bundle 'repeat.vim'
