@@ -124,9 +124,9 @@ set nocompatible               " be iMproved
 " Formatting {
     set wrap
     set colorcolumn=80              " show margin at 80
-    set shiftwidth=2                " use indents of 2 spaces
-    set tabstop=2                   " an indentation every two columns
-    set softtabstop=2               " let backspace delete indent
+    set shiftwidth=8                " use indents of 2 spaces
+    set tabstop=8                   " an indentation every two columns
+    set softtabstop=8               " let backspace delete indent
     set expandtab                   " spaces and not tabs
 
     " Remove trailing whitespaces and ^M chars
@@ -335,3 +335,35 @@ set nocompatible               " be iMproved
         "set term=builtin_ansi       " Make arrow and other keys work
     endif
 " }
+ " Functions {
+
+function! InitializeDirectories()
+    let separator = "."
+    let parent = $HOME
+    let prefix = '.vim'
+    let dir_list = {
+                \ 'backup': 'backupdir',
+                \ 'views': 'viewdir',
+                \ 'swap': 'directory' }
+
+    if has('persistent_undo')
+        let dir_list['undo'] = 'undodir'
+    endif
+
+    for [dirname, settingname] in items(dir_list)
+        let directory = parent . '/' . prefix . dirname . "/"
+        if exists("*mkdir")
+            if !isdirectory(directory)
+                call mkdir(directory)
+            endif
+        endif
+        if !isdirectory(directory)
+            echo "Warning: Unable to create backup directory: " . directory
+            echo "Try: mkdir -p " . directory
+        else
+            let directory = substitute(directory, " ", "\\\\ ", "g")
+            exec "set " . settingname . "=" . directory
+        endif
+    endfor
+endfunction
+call InitializeDirectories()
