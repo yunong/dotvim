@@ -36,6 +36,7 @@ set nocompatible               " be iMproved
 
       " vim script bundles
         Bundle 'The-NERD-tree'
+        Bundle 'file-line'
         Bundle 'repeat.vim'
         Bundle 'L9'
         Bundle 'FuzzyFinder'
