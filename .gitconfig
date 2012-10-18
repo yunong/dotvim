@@ -1,0 +1,11 @@
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[alias]
+  df = diff --color=auto
+[color]
+  ui = auto
+[user]
+  name = Yunong Xiao
+  email = yunong@joyent.com
+[core]
+  editor = /usr/bin/vim
