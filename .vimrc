@@ -24,7 +24,6 @@ set nocompatible               " be iMproved
         Bundle 'Lokaltog/vim-powerline'
         Bundle 'matchit.zip'
         Bundle 'kien/ctrlp.vim'
-        Bundle 'nathanaelkane/vim-indent-guides'
         Bundle 'vim-scripts/Liquid-Carbon.git'
         Bundle 'Shougo/neocomplcache'
         Bundle 'Shougo/neocomplcache-snippets-complete'
@@ -35,6 +34,7 @@ set nocompatible               " be iMproved
         endif
 
       " vim script bundles
+        Bundle 'Indent-Guides'
         Bundle 'The-NERD-tree'
         Bundle 'file-line'
         Bundle 'repeat.vim'
