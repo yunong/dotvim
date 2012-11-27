@@ -26,7 +26,7 @@ set nocompatible               " be iMproved
         Bundle 'kien/ctrlp.vim'
         Bundle 'vim-scripts/Liquid-Carbon.git'
         Bundle 'Shougo/neocomplcache'
-        Bundle 'Shougo/neocomplcache-snippets-complete'
+        Bundle 'Shougo/neosnippet'
         Bundle 'vim-scripts/JavaScript-Indent'
 
         if executable('ctags')
@@ -34,6 +34,7 @@ set nocompatible               " be iMproved
         endif
 
       " vim script bundles
+        Bundle 'cscope.vim'
         Bundle 'Indent-Guides'
         Bundle 'The-NERD-tree'
         Bundle 'file-line'
