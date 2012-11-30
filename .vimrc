@@ -16,7 +16,7 @@ set nocompatible               " be iMproved
     " Bundles {
     " github bundles
         Bundle 'scrooloose/syntastic'
-        Bundle 'vim-scripts/Color-Sampler-Pack'
+        Bundle 'vim-scripts/Colour-Sampler-Pack'
         Bundle 'tpope/vim-fugitive'
         Bundle 'scrooloose/nerdcommenter'
         Bundle 'tpope/vim-surround'
@@ -78,6 +78,7 @@ set nocompatible               " be iMproved
 
 " Vim UI {
     color candycode " load a colorscheme
+    "color solarized  load a colorscheme
     "color liquidcarbon " load a colorscheme
     set tabpagemax=15               " only show 15 tabs
     set showmode                    " display the current mode
