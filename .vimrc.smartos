@@ -25,11 +25,11 @@ set nocompatible               " be iMproved
         Bundle 'matchit.zip'
         Bundle 'kien/ctrlp.vim'
         Bundle 'vim-scripts/Liquid-Carbon.git'
-        Bundle 'Valloric/YouCompleteMe'
+        "Bundle 'Valloric/YouCompleteMe'
         Bundle 'Shougo/neocomplcache'
         Bundle 'Shougo/neosnippet'
         Bundle 'vim-scripts/JavaScript-Indent'
-        "Bundle 'wincent/Command-T'
+        Bundle 'wincent/Command-T'
 
         if executable('ctags')
             Bundle 'majutsushi/tagbar'
