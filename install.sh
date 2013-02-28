@@ -10,20 +10,20 @@ ln -sf ~/dotvim/.gitconfig ~/.
 scp yunong@10.99.99.254:~/.ssh/id_dsa ~/.ssh/id_dsa
 
 # setup pbcopy
-cat << HERE
+cat > ~/pbcopy << HERE
         cat > /tmp/pbcopy
         scp /tmp/pbcopy yunong@10.99.99.254:/tmp/pbcopy > /dev/null
         ssh -n yunong@10.99.99.254 "cat /tmp/pbcopy | pbcopy && rm /tmp/pbcopy" > /dev/null
         rm /tmp/pbcopy
-HERE > ~/pbcopy
+HERE
 chmod 755 ~/pbcopy
 
-cat << HERE
+cat > ~/pbpaste << HERE
         ssh -n yunong@10.99.99.254 "pbpaste > /tmp/pbpaste" > /dev/null
         scp yunong@10.99.99.254:/tmp/pbpaste /tmp/pbpaste > /dev/null
         ssh -n yunong@10.99.99.254 "rm /tmp/pbpaste" > /dev/null
         cat /tmp/pbpaste && rm /tmp/pbpaste
-HERE > ~/pbpaste
+HERE
 chmod 755 ~/pbpaste
 
 echo 'PATH=$PATH:~/' >> ~/.bashrc
