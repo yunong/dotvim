@@ -15,8 +15,7 @@ cat << HERE
         scp /tmp/pbcopy yunong@10.99.99.254:/tmp/pbcopy > /dev/null
         ssh -n yunong@10.99.99.254 "cat /tmp/pbcopy | pbcopy && rm /tmp/pbcopy" > /dev/null
         rm /tmp/pbcopy
-HERE
-> ~/pbcopy
+HERE > ~/pbcopy
 chmod 755 ~/pbcopy
 
 cat << HERE
@@ -24,8 +23,7 @@ cat << HERE
         scp yunong@10.99.99.254:/tmp/pbpaste /tmp/pbpaste > /dev/null
         ssh -n yunong@10.99.99.254 "rm /tmp/pbpaste" > /dev/null
         cat /tmp/pbpaste && rm /tmp/pbpaste
-HERE
-> ~/pbpaste
+HERE > ~/pbpaste
 chmod 755 ~/pbpaste
 
 echo 'PATH=$PATH:~/' >> ~/.bashrc
