@@ -15,34 +15,35 @@ set nocompatible               " be iMproved
 
     " Bundles {
     " github bundles
-        "Bundle 'scrooloose/syntastic'
-        Bundle 'vim-scripts/Colour-Sampler-Pack'
-        Bundle 'tpope/vim-fugitive'
-        Bundle 'scrooloose/nerdcommenter'
-        Bundle 'tpope/vim-surround'
-        Bundle 'corntrace/bufexplorer'
-        Bundle 'Lokaltog/vim-powerline'
-        Bundle 'matchit.zip'
-        Bundle 'kien/ctrlp.vim'
-        Bundle 'vim-scripts/Liquid-Carbon.git'
-        Bundle 'Valloric/YouCompleteMe'
+
         "Bundle 'Shougo/neocomplcache'
         "Bundle 'Shougo/neosnippet'
+        "Bundle 'scrooloose/syntastic'
+        Bundle 'Lokaltog/vim-powerline'
+        Bundle 'Valloric/YouCompleteMe'
+        Bundle 'airblade/vim-gitgutter'
+        Bundle 'corntrace/bufexplorer'
+        Bundle 'kien/ctrlp.vim'
+        Bundle 'matchit.zip'
+        Bundle 'scrooloose/nerdcommenter'
+        Bundle 'tpope/vim-fugitive'
+        Bundle 'tpope/vim-surround'
+        Bundle 'vim-scripts/Colour-Sampler-Pack'
         Bundle 'vim-scripts/JavaScript-Indent'
+        Bundle 'vim-scripts/Liquid-Carbon.git'
         Bundle 'wincent/Command-T'
-
         if executable('ctags')
             Bundle 'majutsushi/tagbar'
         endif
 
       " vim script bundles
-        Bundle 'cscope.vim'
+        Bundle 'FuzzyFinder'
         Bundle 'Indent-Guides'
+        Bundle 'L9'
         Bundle 'The-NERD-tree'
+        Bundle 'cscope.vim'
         Bundle 'file-line'
         Bundle 'repeat.vim'
-        Bundle 'L9'
-        Bundle 'FuzzyFinder'
 
         filetype plugin indent on     " required!
     " }
