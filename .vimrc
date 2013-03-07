@@ -130,9 +130,9 @@ set nocompatible               " be iMproved
 " Formatting {
     set wrap
     set colorcolumn=80              " show margin at 80
-    set shiftwidth=8                " use indents of 2 spaces
-    set tabstop=8                   " an indentation every two columns
-    set softtabstop=8               " let backspace delete indent
+    set shiftwidth=4                " use indents of 4 spaces
+    set tabstop=4                   " an indentation every 4 columns
+    set softtabstop=4               " let backspace delete indent
     set expandtab                   " spaces and not tabs
 
     " Remove trailing whitespaces and ^M chars
