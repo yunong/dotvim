@@ -44,6 +44,7 @@ set nocompatible               " be iMproved
         Bundle 'cscope.vim'
         Bundle 'file-line'
         Bundle 'repeat.vim'
+        Bundle 'yaifa.vim'
 
         filetype plugin indent on     " required!
     " }
