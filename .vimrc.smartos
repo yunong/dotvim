@@ -31,6 +31,7 @@ set nocompatible               " be iMproved
         Bundle 'vim-scripts/JavaScript-Indent'
         Bundle 'vim-scripts/Liquid-Carbon.git'
         Bundle 'wincent/Command-T'
+        Bundle 'pangloss/vim-javascript'
 
         if executable('ctags')
             Bundle 'majutsushi/tagbar'

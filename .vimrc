@@ -29,9 +29,12 @@ set nocompatible               " be iMproved
         Bundle 'tpope/vim-fugitive'
         Bundle 'tpope/vim-surround'
         Bundle 'vim-scripts/Colour-Sampler-Pack'
-        Bundle 'vim-scripts/JavaScript-Indent'
+        "Bundle 'vim-scripts/JavaScript-Indent'
         Bundle 'vim-scripts/Liquid-Carbon.git'
         Bundle 'wincent/Command-T'
+        Bundle 'pangloss/vim-javascript'
+        Bundle 'lambdalisue/nodeunit.vim.git'
+        Bundle 'reinh/vim-makegreen'
         if executable('ctags')
             Bundle 'majutsushi/tagbar'
         endif
@@ -260,6 +263,9 @@ set nocompatible               " be iMproved
       " automatically open and close the popup menu / preview window
       au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
       set completeopt=menu,preview,longest
+  " }
+  " javascript.vim {
+    "set compiler=nodeunit
   " }
 
   "" neocomplcache {
