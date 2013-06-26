@@ -32,6 +32,8 @@ set nocompatible               " be iMproved
         Bundle 'vim-scripts/Liquid-Carbon.git'
         Bundle 'wincent/Command-T'
         Bundle 'pangloss/vim-javascript'
+        Bundle 'rizzatti/funcoo.vim'
+        Bundle 'rizzatti/dash.vim'
 
         if executable('ctags')
             Bundle 'majutsushi/tagbar'
