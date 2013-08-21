@@ -37,6 +37,7 @@ set nocompatible               " be iMproved
         Bundle 'vim-scripts/Colour-Sampler-Pack'
         Bundle 'vim-scripts/Liquid-Carbon.git'
         Bundle 'wincent/Command-T'
+        "Bundle 'myusuf3/numbers.vim'
         if executable('ctags')
             Bundle 'majutsushi/tagbar'
         endif
@@ -161,6 +162,8 @@ set nocompatible               " be iMproved
     nnoremap <F2> :set invpaste paste?<CR>
     set pastetoggle=<F2>
     set showmode
+    " copy a highlighted portion to eh paste buffer
+    command -range Copy silent '<,'>w ! pbcopy
 " }
 
 
