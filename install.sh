@@ -2,7 +2,8 @@
 echo 'export GIT_SSL_NO_VERIFY=1' >> ~/.bashrc
 source ~/.bashrc
 pkgin -f -y up
-pkgin -y install gcc-runtime gcc-compiler gmake scmgit python26 exctags gsharutils gcc47 vim-7.3.712
+pkgin -y install gcc-runtime gcc-compiler gmake scmgit python26 exctags gsharutils gcc47 vim-7.3.712 nodejs-0.8.22
+npm install -g jshint
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 git clone git://github.com/yunong/dotvim.git ~/dotvim
 ln -sf ~/dotvim/.vimrc.smartos ~/.vimrc

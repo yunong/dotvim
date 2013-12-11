@@ -18,7 +18,7 @@ set nocompatible               " be iMproved
 
         "Bundle 'Shougo/neocomplcache'
         "Bundle 'Shougo/neosnippet'
-        "Bundle 'scrooloose/syntastic'
+        Bundle 'scrooloose/syntastic'
         "Bundle 'vim-scripts/JavaScript-Indent'
         Bundle 'Lokaltog/vim-powerline'
         Bundle 'Valloric/YouCompleteMe'

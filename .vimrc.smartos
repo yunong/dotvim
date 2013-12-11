@@ -16,7 +16,7 @@ set nocompatible               " be iMproved
     " Bundles {
     " github bundles
         "Bundle 'Valloric/YouCompleteMe'
-        "Bundle 'scrooloose/syntastic'
+        Bundle 'scrooloose/syntastic'
         Bundle 'Lokaltog/vim-powerline'
         Bundle 'Shougo/neocomplcache'
         Bundle 'Shougo/neosnippet'
