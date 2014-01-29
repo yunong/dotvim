@@ -16,12 +16,12 @@ set nocompatible               " be iMproved
     " Bundles {
     " github bundles
 
-        "Bundle 'Shougo/neocomplcache'
+        Bundle 'Shougo/neocomplcache'
         "Bundle 'Shougo/neosnippet'
         Bundle 'scrooloose/syntastic'
         "Bundle 'vim-scripts/JavaScript-Indent'
         Bundle 'Lokaltog/vim-powerline'
-        Bundle 'Valloric/YouCompleteMe'
+        "Bundle 'Valloric/YouCompleteMe'
         Bundle 'airblade/vim-gitgutter'
         Bundle 'corntrace/bufexplorer'
         Bundle 'kien/ctrlp.vim'
