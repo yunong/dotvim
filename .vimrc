@@ -37,6 +37,7 @@ set nocompatible               " be iMproved
         Bundle 'vim-scripts/Colour-Sampler-Pack'
         Bundle 'vim-scripts/Liquid-Carbon.git'
         Bundle 'wincent/Command-T'
+        Bundle 'tpope/vim-markdown'
         "Bundle 'myusuf3/numbers.vim'
         if executable('ctags')
             Bundle 'majutsushi/tagbar'

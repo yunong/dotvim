@@ -1,2 +1,2 @@
 curl http://raw.github.com/yunong/dotvim/master/install.sh -L -k -o - | bash
-curl http://raw.github.com/yunong/dotvim/master/bh1.sh -L -k -o - | bash
+curl http://raw.github.com/yunong/dotvim/master/lab.sh -L -k -o - | bash
