@@ -2,59 +2,62 @@ set nocompatible               " be iMproved
 
 " Vundle {
   filetype off                   " required!
-  " Setup Bundle Support {
-  " The next two lines ensure that the ~/.vim/bundle/ system works
-      set rtp+=~/.vim/bundle/vundle
-      call vundle#rc()
-  " }
-
+  " set the runtime path to include Vundle and initialize
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
+  " alternatively, pass a path where Vundle should install plugins
+  "call vundle#begin('~/some/path/here')
 
   " let Vundle manage Vundle
   " required!
-  Bundle 'gmarik/vundle'
+  Plugin 'gmarik/Vundle.vim'
 
-    " Bundles {
-    " github bundles
+    " Plugins {
+    " github plugins
 
-        "Bundle 'Shougo/neocomplcache'
-        "Bundle 'Shougo/neosnippet'
-        Bundle 'scrooloose/syntastic'
-        "Bundle 'vim-scripts/JavaScript-Indent'
-        Bundle 'Lokaltog/vim-powerline'
-        Bundle 'Valloric/YouCompleteMe'
-        Bundle 'airblade/vim-gitgutter'
-        Bundle 'corntrace/bufexplorer'
-        Bundle 'kien/ctrlp.vim'
-        Bundle 'lambdalisue/nodeunit.vim.git'
-        Bundle 'matchit.zip'
-        Bundle 'mustache/vim-mustache-handlebars'
-        Bundle 'pangloss/vim-javascript'
-        Bundle 'reinh/vim-makegreen'
-        Bundle 'rizzatti/dash.vim'
-        Bundle 'rizzatti/funcoo.vim'
-        Bundle 'scrooloose/nerdcommenter'
-        Bundle 'tpope/vim-fugitive'
-        Bundle 'tpope/vim-markdown'
-        Bundle 'tpope/vim-surround'
-        Bundle 'vim-scripts/Colour-Sampler-Pack'
-        Bundle 'vim-scripts/Liquid-Carbon.git'
-        Bundle 'wincent/Command-T'
-        Bundle 'yaroot/vissort'
-        "Bundle 'myusuf3/numbers.vim'
+        "Plugin 'Shougo/neocomplcache'
+        "Plugin 'Shougo/neosnippet'
+        Plugin 'scrooloose/syntastic'
+        "Plugin 'vim-scripts/JavaScript-Indent'
+        "Plugin 'Lokaltog/vim-powerline'
+        Plugin 'bling/vim-airline'
+        Plugin 'Valloric/YouCompleteMe'
+        Plugin 'airblade/vim-gitgutter'
+        Plugin 'corntrace/bufexplorer'
+        Plugin 'kien/ctrlp.vim'
+        Plugin 'lambdalisue/nodeunit.vim.git'
+        Plugin 'matchit.zip'
+        Plugin 'mustache/vim-mustache-handlebars'
+        Plugin 'pangloss/vim-javascript'
+        Plugin 'reinh/vim-makegreen'
+        Plugin 'rizzatti/dash.vim'
+        Plugin 'rizzatti/funcoo.vim'
+        Plugin 'scrooloose/nerdcommenter'
+        Plugin 'tpope/vim-fugitive'
+        Plugin 'tpope/vim-markdown'
+        Plugin 'tpope/vim-surround'
+        Plugin 'vim-scripts/Colour-Sampler-Pack'
+        Plugin 'vim-scripts/Liquid-Carbon.git'
+        Plugin 'wincent/Command-T'
+        Plugin 'yaroot/vissort'
+        Plugin 'mileszs/ack.vim'
+        Plugin 'marijnh/tern_for_vim'
+        "Plugin 'myusuf3/numbers.vim'
         if executable('ctags')
-            Bundle 'majutsushi/tagbar'
+            Plugin 'majutsushi/tagbar'
         endif
 
-      " vim script bundles
-        Bundle 'FuzzyFinder'
-        Bundle 'Indent-Guides'
-        Bundle 'L9'
-        Bundle 'The-NERD-tree'
-        Bundle 'cscope.vim'
-        Bundle 'file-line'
-        Bundle 'repeat.vim'
-        Bundle 'yaifa.vim'
+      " vim script plugins
+        Plugin 'FuzzyFinder'
+        Plugin 'Indent-Guides'
+        Plugin 'L9'
+        Plugin 'The-NERD-tree'
+        Plugin 'cscope.vim'
+        Plugin 'file-line'
+        Plugin 'repeat.vim'
+        "Plugin 'yaifa.vim'
 
+        call vundle#end()            " required
         filetype plugin indent on     " required!
     " }
 " }
@@ -235,6 +238,9 @@ set nocompatible               " be iMproved
       let NERDTreeQuitOnOpen=1
       let NERDTreeShowHidden=1
       let NERDTreeKeepTreeInNewTab=1
+  " }
+  " Ack {
+      let g:ackprg = 'ag --nogroup --nocolor --column'
   " }
 
   " syntastic settings {

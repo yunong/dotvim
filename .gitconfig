@@ -6,6 +6,8 @@
   ui = auto
 [user]
   name = Yunong Xiao
-  email = yunong@joyent.com
+  email = yjxiao@gmail.com
 [core]
   editor = /usr/bin/vim
+[push]
+	default = simple
