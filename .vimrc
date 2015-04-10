@@ -15,24 +15,28 @@ set nocompatible               " be iMproved
     " Plugins {
     " github plugins
 
+        "Plugin 'Lokaltog/vim-powerline'
         "Plugin 'Shougo/neocomplcache'
         "Plugin 'Shougo/neosnippet'
-        Plugin 'scrooloose/syntastic'
         "Plugin 'vim-scripts/JavaScript-Indent'
-        "Plugin 'Lokaltog/vim-powerline'
-        Plugin 'bling/vim-airline'
         Plugin 'Valloric/YouCompleteMe'
         Plugin 'airblade/vim-gitgutter'
+        Plugin 'bling/vim-airline'
         Plugin 'corntrace/bufexplorer'
         Plugin 'kien/ctrlp.vim'
         Plugin 'lambdalisue/nodeunit.vim.git'
+        Plugin 'marijnh/tern_for_vim'
         Plugin 'matchit.zip'
+        Plugin 'mattn/gist-vim'
+        Plugin 'mattn/webapi-vim'
+        Plugin 'mileszs/ack.vim'
         Plugin 'mustache/vim-mustache-handlebars'
         Plugin 'pangloss/vim-javascript'
         Plugin 'reinh/vim-makegreen'
         Plugin 'rizzatti/dash.vim'
         Plugin 'rizzatti/funcoo.vim'
         Plugin 'scrooloose/nerdcommenter'
+        Plugin 'scrooloose/syntastic'
         Plugin 'tpope/vim-fugitive'
         Plugin 'tpope/vim-markdown'
         Plugin 'tpope/vim-surround'
@@ -40,8 +44,9 @@ set nocompatible               " be iMproved
         Plugin 'vim-scripts/Liquid-Carbon.git'
         Plugin 'wincent/Command-T'
         Plugin 'yaroot/vissort'
-        Plugin 'mileszs/ack.vim'
-        Plugin 'marijnh/tern_for_vim'
+        Plugin 'mxw/vim-jsx'
+        Plugin 'tfnico/vim-gradle'
+        Plugin 'suan/vim-instant-markdown'
         "Plugin 'myusuf3/numbers.vim'
         if executable('ctags')
             Plugin 'majutsushi/tagbar'
@@ -144,7 +149,7 @@ set nocompatible               " be iMproved
     set wrap
     set colorcolumn=80              " show margin at 80
     set shiftwidth=4                " use indents of 4 spaces
-    set tabstop=8                   " an indentation every 4 columns
+    set tabstop=4                   " an indentation every 4 columns
     set softtabstop=4               " let backspace delete indent
     set expandtab                   " spaces and not tabs
 
@@ -224,6 +229,17 @@ set nocompatible               " be iMproved
 " Plugins {
   " Buffer explorer {
     nmap <leader>b :BufExplorer<CR>
+  " }
+
+  " airline {
+      if !exists('g:airline_symbols')
+          let g:airline_symbols = {}
+      endif
+      let g:airline_symbols.space = "\ua0"
+      let g:airline#extensions#tabline#enabled = 1
+  " }
+  " gist-vim {
+      let g:gist_clip_command = 'pbcopy'
   " }
 
   " NerdTree {

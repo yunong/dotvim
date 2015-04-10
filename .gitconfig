@@ -11,3 +11,5 @@
   editor = /usr/bin/vim
 [push]
 	default = simple
+[github]
+	user = yunong
