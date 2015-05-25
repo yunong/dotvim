@@ -149,7 +149,7 @@ set nocompatible               " be iMproved
     set wrap
     set colorcolumn=80              " show margin at 80
     set shiftwidth=4                " use indents of 4 spaces
-    set tabstop=4                   " an indentation every 4 columns
+    set tabstop=8                   " an indentation every 4 columns
     set softtabstop=4               " let backspace delete indent
     set expandtab                   " spaces and not tabs
 
@@ -261,6 +261,7 @@ set nocompatible               " be iMproved
 
   " syntastic settings {
       let g:syntastic_check_on_open=1
+      let g:syntastic_javascript_checkers = ['eslint', 'jscs']
       "let g:syntastic_auto_loc_list=1
   " }
 
