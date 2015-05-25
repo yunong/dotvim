@@ -13,8 +13,19 @@ set nocompatible               " be iMproved
   Plugin 'gmarik/Vundle.vim'
 
     " Plugins {
-    " github plugins
 
+      " vim script plugins
+        Plugin 'FuzzyFinder'
+        Plugin 'Indent-Guides'
+        Plugin 'L9'
+        Plugin 'The-NERD-tree'
+        Plugin 'cscope.vim'
+        Plugin 'file-line'
+        Plugin 'repeat.vim'
+        Plugin 'tabular'
+        "Plugin 'yaifa.vim'
+
+        " github plugins
         "Plugin 'Lokaltog/vim-powerline'
         "Plugin 'Shougo/neocomplcache'
         "Plugin 'Shougo/neosnippet'
@@ -38,7 +49,7 @@ set nocompatible               " be iMproved
         Plugin 'scrooloose/nerdcommenter'
         Plugin 'scrooloose/syntastic'
         Plugin 'tpope/vim-fugitive'
-        Plugin 'tpope/vim-markdown'
+        Plugin 'plasticboy/vim-markdown'
         Plugin 'tpope/vim-surround'
         Plugin 'vim-scripts/Colour-Sampler-Pack'
         Plugin 'vim-scripts/Liquid-Carbon.git'
@@ -46,21 +57,11 @@ set nocompatible               " be iMproved
         Plugin 'yaroot/vissort'
         Plugin 'mxw/vim-jsx'
         Plugin 'tfnico/vim-gradle'
-        Plugin 'suan/vim-instant-markdown'
+        Plugin 'shime/vim-livedown'
         "Plugin 'myusuf3/numbers.vim'
         if executable('ctags')
             Plugin 'majutsushi/tagbar'
         endif
-
-      " vim script plugins
-        Plugin 'FuzzyFinder'
-        Plugin 'Indent-Guides'
-        Plugin 'L9'
-        Plugin 'The-NERD-tree'
-        Plugin 'cscope.vim'
-        Plugin 'file-line'
-        Plugin 'repeat.vim'
-        "Plugin 'yaifa.vim'
 
         call vundle#end()            " required
         filetype plugin indent on     " required!
@@ -238,8 +239,18 @@ set nocompatible               " be iMproved
       let g:airline_symbols.space = "\ua0"
       let g:airline#extensions#tabline#enabled = 1
   " }
+
   " gist-vim {
       let g:gist_clip_command = 'pbcopy'
+  " }
+
+  " vim-livedown {
+    nmap <leader>m :LivedownPreview<CR>
+  " }
+
+  " vim-markdown {
+    " disable folding
+    let g:vim_markdown_folding_disabled=1
   " }
 
   " NerdTree {
