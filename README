@@ -1,1 +1,3 @@
 curl http://raw.github.com/yunong/dotvim/master/install.sh -L -k -o - | bash
+
+Launch vim and type `:PluginInstall`
