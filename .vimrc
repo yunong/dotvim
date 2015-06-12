@@ -42,6 +42,7 @@ set nocompatible               " be iMproved
         Plugin 'mattn/webapi-vim'
         Plugin 'mileszs/ack.vim'
         Plugin 'mustache/vim-mustache-handlebars'
+        Plugin 'ntpeters/vim-better-whitespace'
         Plugin 'pangloss/vim-javascript'
         Plugin 'reinh/vim-makegreen'
         Plugin 'rizzatti/dash.vim'
@@ -156,7 +157,7 @@ set nocompatible               " be iMproved
 
     " Remove trailing whitespaces and ^M chars
     " autocmd BufWritePre  *.{cpp,h,c,conf,restdown,md,java,js,python,twig,xml,yml,rb,py,pm,pl,md,etc}  call StripTrailingWhite()
-    autocmd BufWritePre  *.* call StripTrailingWhite()
+    "autocmd BufWritePre  *.* call StripTrailingWhite()
 
     function! StripTrailingWhite()
         let l:winview = winsaveview()
@@ -289,6 +290,10 @@ set nocompatible               " be iMproved
     autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
     autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
   "}
+  " Vim Better Whitespace {
+    autocmd FileType * autocmd BufWritePre <buffer> StripWhitespace
+
+  " }
 
   " OmniComplete {
       if has("autocmd") && exists("+omnifunc")
