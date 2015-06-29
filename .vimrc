@@ -34,6 +34,7 @@ set nocompatible               " be iMproved
         Plugin 'airblade/vim-gitgutter'
         Plugin 'bling/vim-airline'
         Plugin 'corntrace/bufexplorer'
+        Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
         Plugin 'kien/ctrlp.vim'
         Plugin 'lambdalisue/nodeunit.vim.git'
         Plugin 'marijnh/tern_for_vim'
@@ -239,6 +240,17 @@ set nocompatible               " be iMproved
       endif
       let g:airline_symbols.space = "\ua0"
       let g:airline#extensions#tabline#enabled = 1
+      "let g:airline#extensions#tabline#buffer_idx_mode = 1
+      "nmap <leader>1 <Plug>AirlineSelectTab1
+      "nmap <leader>2 <Plug>AirlineSelectTab2
+      "nmap <leader>3 <Plug>AirlineSelectTab3
+      "nmap <leader>4 <Plug>AirlineSelectTab4
+      "nmap <leader>5 <Plug>AirlineSelectTab5
+      "nmap <leader>6 <Plug>AirlineSelectTab6
+      "nmap <leader>7 <Plug>AirlineSelectTab7
+      "nmap <leader>8 <Plug>AirlineSelectTab8
+      "nmap <leader>9 <Plug>AirlineSelectTab9
+      "let g:airline#extensions#tabline#show_buffers = 1
   " }
 
   " gist-vim {
@@ -272,9 +284,19 @@ set nocompatible               " be iMproved
   " }
 
   " syntastic settings {
-      let g:syntastic_check_on_open=1
-      let g:syntastic_javascript_checkers = ['eslint', 'jscs']
-      "let g:syntastic_auto_loc_list=1
+  "
+  let g:syntastic_check_on_open=1
+  let js_syn_checkers = []
+  if (findfile('.eslintrc', '.;') != '')
+      call add(js_syn_checkers, 'eslint')
+  endif
+  if (findfile('.jscsrc', '.;') != '')
+      call add(js_syn_checkers, 'jscs')
+  endif
+
+  let g:syntastic_javascript_checkers = js_syn_checkers
+  let g:syntastic_javascript_checkers = ['eslint', 'jscs']
+  "let g:syntastic_auto_loc_list=1
   " }
 
   " Ctags {
