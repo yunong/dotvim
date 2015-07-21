@@ -60,6 +60,7 @@ set nocompatible               " be iMproved
         Plugin 'mxw/vim-jsx'
         Plugin 'tfnico/vim-gradle'
         Plugin 'shime/vim-livedown'
+        Plugin 'heavenshell/vim-jsdoc'
         "Plugin 'myusuf3/numbers.vim'
         if executable('ctags')
             Plugin 'majutsushi/tagbar'
