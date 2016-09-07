@@ -30,11 +30,13 @@ set nocompatible               " be iMproved
         "Plugin 'Shougo/neocomplcache'
         "Plugin 'Shougo/neosnippet'
         "Plugin 'vim-scripts/JavaScript-Indent'
+        "Plugin 'myusuf3/numbers.vim'
         Plugin 'Valloric/YouCompleteMe'
         Plugin 'airblade/vim-gitgutter'
         Plugin 'bling/vim-airline'
         Plugin 'corntrace/bufexplorer'
         Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
+        Plugin 'heavenshell/vim-jsdoc'
         Plugin 'kien/ctrlp.vim'
         Plugin 'lambdalisue/nodeunit.vim.git'
         Plugin 'marijnh/tern_for_vim'
@@ -43,6 +45,7 @@ set nocompatible               " be iMproved
         Plugin 'mattn/webapi-vim'
         Plugin 'mileszs/ack.vim'
         Plugin 'mustache/vim-mustache-handlebars'
+        Plugin 'mxw/vim-jsx'
         Plugin 'ntpeters/vim-better-whitespace'
         Plugin 'pangloss/vim-javascript'
         Plugin 'reinh/vim-makegreen'
@@ -50,18 +53,14 @@ set nocompatible               " be iMproved
         Plugin 'rizzatti/funcoo.vim'
         Plugin 'scrooloose/nerdcommenter'
         Plugin 'scrooloose/syntastic'
+        Plugin 'suan/vim-instant-markdown'
+        Plugin 'tfnico/vim-gradle'
         Plugin 'tpope/vim-fugitive'
-        Plugin 'plasticboy/vim-markdown'
         Plugin 'tpope/vim-surround'
         Plugin 'vim-scripts/Colour-Sampler-Pack'
         Plugin 'vim-scripts/Liquid-Carbon.git'
         Plugin 'wincent/Command-T'
         Plugin 'yaroot/vissort'
-        Plugin 'mxw/vim-jsx'
-        Plugin 'tfnico/vim-gradle'
-        Plugin 'shime/vim-livedown'
-        Plugin 'heavenshell/vim-jsdoc'
-        "Plugin 'myusuf3/numbers.vim'
         if executable('ctags')
             Plugin 'majutsushi/tagbar'
         endif
@@ -256,15 +255,6 @@ set nocompatible               " be iMproved
 
   " gist-vim {
       let g:gist_clip_command = 'pbcopy'
-  " }
-
-  " vim-livedown {
-    nmap <leader>m :LivedownPreview<CR>
-  " }
-
-  " vim-markdown {
-    " disable folding
-    let g:vim_markdown_folding_disabled=1
   " }
 
   " NerdTree {
