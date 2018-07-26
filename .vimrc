@@ -32,6 +32,8 @@ set nocompatible               " be iMproved
         "Plugin 'vim-scripts/JavaScript-Indent'
         "Plugin 'myusuf3/numbers.vim'
         Plugin 'Valloric/YouCompleteMe'
+        Plugin 'w0rp/ale'
+        "Plugin 'Shougo/neocomplete'
         Plugin 'airblade/vim-gitgutter'
         Plugin 'bling/vim-airline'
         Plugin 'corntrace/bufexplorer'
@@ -48,14 +50,15 @@ set nocompatible               " be iMproved
         Plugin 'mxw/vim-jsx'
         Plugin 'ntpeters/vim-better-whitespace'
         Plugin 'pangloss/vim-javascript'
+        Plugin 'plasticboy/vim-markdown'
         Plugin 'reinh/vim-makegreen'
         Plugin 'rizzatti/dash.vim'
         Plugin 'rizzatti/funcoo.vim'
         Plugin 'scrooloose/nerdcommenter'
-        Plugin 'scrooloose/syntastic'
-        Plugin 'suan/vim-instant-markdown'
+        "Plugin 'scrooloose/syntastic'
         Plugin 'tfnico/vim-gradle'
         Plugin 'tpope/vim-fugitive'
+        Plugin 'tpope/vim-sleuth'
         Plugin 'tpope/vim-surround'
         Plugin 'vim-scripts/Colour-Sampler-Pack'
         Plugin 'vim-scripts/Liquid-Carbon.git'
@@ -71,6 +74,7 @@ set nocompatible               " be iMproved
 " }
 
 " General {
+    "autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " force md as markdown
     set background=dark         " Assume a dark background
     filetype plugin indent on   " Automatically detect file types.
     syntax on                   " syntax highlighting
@@ -234,6 +238,10 @@ set nocompatible               " be iMproved
     nmap <leader>b :BufExplorer<CR>
   " }
 
+  "ctrlp {
+    let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+  "}
+
   " airline {
       if !exists('g:airline_symbols')
           let g:airline_symbols = {}
@@ -253,8 +261,29 @@ set nocompatible               " be iMproved
       "let g:airline#extensions#tabline#show_buffers = 1
   " }
 
+  " vim-jsdoc {
+      "nmap <silent> <C-l> <Plug>(jsdoc)
+  " }
+  " ale {
+  let g:ale_fixers = {'javascript': ['eslint', 'prettier']}
+  let g:ale_fix_on_save = 1
+  let g:airline#extensions#ale#enabled = 1
+  let g:ale_completion_enabled = 0
+  "let g:ale_lint_on_enter = 0
+  "let g:ale_lint_on_text_changed = 'never'
+  let g:ale_sign_column_always = 1
+  "let g:ale_sign_error = '✖'
+  let g:ale_sign_warning = '‼'
+  let g:ale_linter_aliases = { 'jsx': 'js', 'ts': 'js' }
+  let g:ale_set_highlights = 0
+  " }
+
   " gist-vim {
       let g:gist_clip_command = 'pbcopy'
+  " }
+
+  " vim-markdown {
+      let g:vim_markdown_folding_disabled = 1
   " }
 
   " NerdTree {
