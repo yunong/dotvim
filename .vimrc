@@ -41,6 +41,7 @@ set nocompatible               " be iMproved
         Plugin 'heavenshell/vim-jsdoc'
         Plugin 'kien/ctrlp.vim'
         Plugin 'lambdalisue/nodeunit.vim.git'
+        Plugin 'leafgarland/typescript-vim'
         Plugin 'marijnh/tern_for_vim'
         Plugin 'matchit.zip'
         Plugin 'mattn/gist-vim'
@@ -262,8 +263,13 @@ set nocompatible               " be iMproved
   " }
 
   " vim-jsdoc {
+      let g:jsdoc_allow_input_prompt = 1
+      let g:jsdoc_input_description = 1
+      let g:jsdoc_additional_descriptions = 1
+      let g:jsdoc_underscore_private = 1
       "nmap <silent> <C-l> <Plug>(jsdoc)
   " }
+
   " ale {
   let g:ale_fixers = {'javascript': ['eslint', 'prettier']}
   let g:ale_fix_on_save = 1
